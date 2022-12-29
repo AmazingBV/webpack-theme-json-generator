@@ -21,7 +21,7 @@ Add the plugin to your Webpack config file:
 
 ```js
 // webpack.config.js
-const ThemeJsonGenerator = require('webpack-theme-json-generator');
+const ThemeJsonGeneratorPlugin = require('@amazingbv/webpack-theme-json-generator').default;
 
 module.exports = {
   // ...
@@ -38,7 +38,7 @@ Alternatively, you can use this Webpack plugin in your Laravel Mix configuration
 
 ```js
 // webpack.mix.js
-const ThemeJsonGenerator = require('webpack-theme-json-generator');
+const ThemeJsonGeneratorPlugin = require('@amazingbv/webpack-theme-json-generator').default;
 
 mix.webpackConfig({
     plugins: [
