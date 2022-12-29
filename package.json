@@ -1,6 +1,6 @@
 {
   "name": "@amazingbv/webpack-theme-json-generator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An npm package for generating theme.json files for webpack",
   "main": "index.js",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Amazing Mixed Media Minds",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AmazingBV/webpack-theme-json-generator/issues"
   },
