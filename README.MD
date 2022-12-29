@@ -9,7 +9,7 @@ A plugin for Webpack to generate your theme.json file from multiple files.
 
 Include the package in your project:
 
-`npm install amazingbv/webpack-theme-json-generator --save-dev`
+`npm install @amazingbv/webpack-theme-json-generator --save-dev`
 
 ## Description
 
