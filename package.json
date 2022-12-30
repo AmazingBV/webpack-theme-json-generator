@@ -1,6 +1,6 @@
 {
     "name": "@amazingbv/webpack-theme-json-generator",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "An npm package for Webpack for generating your WordPress theme.json file from multiple JSON files.",
     "main": "index.js",
     "repository": {
