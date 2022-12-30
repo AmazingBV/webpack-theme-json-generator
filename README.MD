@@ -13,7 +13,7 @@ Include the package in your project:
 
 ## Description
 
-The plugin will generate a theme.json file from multiple files. Given a source directory the plugin will use the 'dot notation' to add create the correct theme.json structure.
+The plugin will generate a theme.json file from multiple files. Given a source directory the plugin will use the 'dot notation' to create the correct theme.json structure.
 
 ## Usage
 
