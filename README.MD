@@ -3,7 +3,7 @@
   webpack-theme-json-generator
 </h1>
 
-A plugin for Webpack to generate your theme.json file from multiple files.
+A plugin for Webpack to generate your WordPress theme.json file from multiple files.
 
 ## Installation
 
@@ -49,6 +49,21 @@ mix.webpackConfig({
     ]
 });
 ```
+
+### Alternative uses
+
+You can also use this plugin to generate other JSON files. To do this, you can change the `sourceFile` and `filePrefix` values. An example of this config could be as follows:
+
+```js
+new ThemeJsonGeneratorPlugin({
+    sourceFile: 'products.json',
+    sourceDirectory: 'sub-dir/products/',
+    filePrefix: 'products.',
+    destinationFile: 'sub-dir/products.json'
+})
+```
+
+Above configuration will scan the `sub-dir/products/` directory for all JSON files, taking `products.json` as the base file, instead of `theme.json`. The `filePrefix` value will be used to determine which files to include in the final JSON file. In this case, all files that start with `products.` will be included in the final `products.json` file. 
 
 ## File structure
 

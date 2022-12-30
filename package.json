@@ -1,17 +1,26 @@
 {
-  "name": "@amazingbv/webpack-theme-json-generator",
-  "version": "1.0.2",
-  "description": "An npm package for generating theme.json files for webpack",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AmazingBV/webpack-theme-json-generator.git"
-  },
-  "keywords": [],
-  "author": "Amazing Mixed Media Minds",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AmazingBV/webpack-theme-json-generator/issues"
-  },
-  "homepage": "https://github.com/AmazingBV/webpack-theme-json-generator#readme"
+    "name": "@amazingbv/webpack-theme-json-generator",
+    "version": "1.1.0",
+    "description": "An npm package for Webpack for generating your WordPress theme.json file from multiple JSON files.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AmazingBV/webpack-theme-json-generator.git"
+    },
+    "keywords": [
+        "wordpress",
+        "theme",
+        "json",
+        "theme.json",
+        "webpack"
+    ],
+    "author": "Amazing Mixed Media Minds",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/AmazingBV/webpack-theme-json-generator/issues"
+    },
+    "homepage": "https://github.com/AmazingBV/webpack-theme-json-generator#readme",
+    "dependencies": {
+        "lodash": "^4.17.21"
+    }
 }

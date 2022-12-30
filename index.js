@@ -4,7 +4,9 @@ const path = require("path");
 
 class ThemeJsonGeneratorPlugin {
     static defaultOptions = {
+        sourceFile: 'theme.json',
         sourceDirectory: '',
+        filePrefix: 'theme.',
         destinationFile: ''
     }
 
@@ -32,16 +34,16 @@ class ThemeJsonGeneratorPlugin {
                     const path = require('path');
                     const _ = require('lodash');
 
-                    const themeJsonString = fs.readFileSync(`${this.options.sourceDirectory}./theme.json`, { encoding: 'utf-8'});
+                    const themeJsonString = fs.readFileSync(`${this.options.sourceDirectory}./${this.options.sourceFile}`, { encoding: 'utf-8'});
                     const themeJson = JSON.parse(themeJsonString);
 
                     const otherFiles = fs.readdirSync(this.options.sourceDirectory);
 
-                    compilation.fileDependencies.add(path.resolve(`${this.options.sourceDirectory}/theme.json`));
+                    compilation.fileDependencies.add(path.resolve(`${this.options.sourceDirectory}/${this.options.sourceFile}`));
 
                     const fileStrings = [];
                     for(const file of otherFiles) {
-                        if(!file.endsWith('.json') || file === 'theme.json') {
+                        if(!file.endsWith('.json') || !file.startsWith(this.options.filePrefix) || file === this.options.sourceFile) {
                             continue;
                         }
 
@@ -50,7 +52,7 @@ class ThemeJsonGeneratorPlugin {
                         const fileString = fs.readFileSync(`${this.options.sourceDirectory}/${file}`, { encoding: 'utf-8'});
 
                         const jsonPath = file.replace('.json', '')
-                            .replace('theme.', '')
+                            .replace(this.options.filePrefix, '')
                             .replaceAll('-', '/');
 
                         fileStrings.push({
